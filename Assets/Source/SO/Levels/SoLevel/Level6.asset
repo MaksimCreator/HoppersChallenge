@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eac40f35bdf5394190b98991b4a2dd2, type: 3}
+  m_Name: Level6
+  m_EditorClassIdentifier: 
+  _positionGround:
+  - {x: 0, y: 2}
+  - {x: 1, y: 0}
+  - {x: 1, y: 5}
+  - {x: 2, y: 3}
+  - {x: 2, y: 8}
+  - {x: 3, y: 6}
+  - {x: 4, y: 1}
+  - {x: 4, y: 5}
+  - {x: 4, y: 8}
+  - {x: 5, y: 2}
+  - {x: 5, y: 10}
+  - {x: 7, y: 0}
+  - {x: 7, y: 7}
+  - {x: 9, y: 0}
+  - {x: 9, y: 2}
+  - {x: 9, y: 5}
+  - {x: 10, y: 1}
+  - {x: 10, y: 3}
+  - {x: 10, y: 7}
+  - {x: 11, y: 0}
+  - {x: 12, y: 2}
+  - {x: 12, y: 4}
+  - {x: 13, y: 0}
+  - {x: 13, y: 5}
+  - {x: 13, y: 6}
+  - {x: 13, y: 9}
+  _countApply: 3
+  _countStar: 3
+  _countSword: 3
+  _targetScore: 165
+  _health: 3
+  _delayFirstWonPanel: 1.2
+  _lengh: 11
+  _row: 14
