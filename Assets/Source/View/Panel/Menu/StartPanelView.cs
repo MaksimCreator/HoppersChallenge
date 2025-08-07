@@ -79,8 +79,6 @@ public class StartPanelView : IControl
     {
         OnDisable();
         await UniTask.Delay(Config.DELAY_TRANSITION_MILISECOND);
-        OnEnable();
-        _startPanel.gameObject.SetActive(false);
         Application.Quit();
     }
 

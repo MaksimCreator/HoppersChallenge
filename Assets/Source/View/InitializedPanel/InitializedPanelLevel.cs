@@ -30,23 +30,23 @@ public class InitializedPanelLevel : MonoBehaviour
     [SerializeField] private Sprite _disableHealth;
 
     [Header("GameplayPanel")]
-    [SerializeField] private Image _gameplayImage;
+    [SerializeField] private Image _gameplayPanel;
     [SerializeField] private Button _pauseButton;
     
     [Header("PauseGameplayPanel")]
-    [SerializeField] private Image _pauseGameplayImage;
+    [SerializeField] private Image _pauseGameplayPanel;
     [SerializeField] private Button _pauseHomeButton;
     [SerializeField] private Button _pauseBackGameplay;
     
     [Header("DeathPanel")]
-    [SerializeField] private Image _deathImage;
+    [SerializeField] private Image _deathPanel;
     [SerializeField] private Button _deathReplay;
     [SerializeField] private TextMeshProUGUI _scoreDeath;
 
     [Header("WonPanel")]
     [SerializeField] private Button _replayWon;
-    [SerializeField] private Image _firstPaneImageWon;
-    [SerializeField] private Image _secondPaneImageWon;
+    [SerializeField] private Image _firstPanePanelWon;
+    [SerializeField] private Image _secondPanePanelWon;
     [SerializeField] private TextMeshProUGUI _firstPanelScoreWon;
     [SerializeField] private TextMeshProUGUI _secondPanelScoreWon;
 
@@ -57,9 +57,9 @@ public class InitializedPanelLevel : MonoBehaviour
     private WalletView _walletView;
     private HealthView _healthView;
 
-    private PauseGameplayPanel _pauseGameplayPanel;
-    private GameplayPanel _gameplayPanel;
-    private DeathPanel _deathPanel;
+    private PauseGameplayPanel _pauseGameplay;
+    private GameplayPanel _gameplay;
+    private DeathPanel _death;
     private WonPanel _wonPanel;
 
     [Inject]
@@ -73,16 +73,15 @@ public class InitializedPanelLevel : MonoBehaviour
         DeathPanel deathPanel,
         WonPanel wonPanel)
     {
-        _pauseGameplayPanel = pauseGameplayPanel;
+        _pauseGameplay = pauseGameplayPanel;
         _playerAnimation = playerAnimation;
         _levelController = levelController;
         _inventaryView = inventaryView;
-        _gameplayPanel = gameplayPanel;
+        _gameplay = gameplayPanel;
         _walletView = walletView;
         _healthView = healthView;
-        _deathPanel = deathPanel;
+        _death = deathPanel;
         _wonPanel = wonPanel;
-
     }
 
     public void Init()
@@ -95,9 +94,9 @@ public class InitializedPanelLevel : MonoBehaviour
         _healthView.Init(_healthImage, _enableHealth, _disableHealth);
         _walletView.Init(_scoreGameplay,_targetGameplay);
 
-        _wonPanel.Init(_replayWon, _firstPaneImageWon, _secondPaneImageWon, _firstPanelScoreWon, _secondPanelScoreWon, _mapConfig);
-        _pauseGameplayPanel.Init(_pauseHomeButton, _pauseBackGameplay, _pauseGameplayImage);
-        _gameplayPanel.Init(_gameplayImage, _pauseButton,_pauseGameplayPanel);
-        _deathPanel.Init(_deathImage, _deathReplay,_scoreDeath);
+        _wonPanel.Init(_replayWon, _firstPanePanelWon, _secondPanePanelWon, _firstPanelScoreWon, _secondPanelScoreWon, _mapConfig);
+        _pauseGameplay.Init(_pauseHomeButton, _pauseBackGameplay, _pauseGameplayPanel);
+        _gameplay.Init(_gameplayPanel, _pauseButton,_pauseGameplay);
+        _death.Init(_deathPanel, _deathReplay,_scoreDeath);
     }
 }
