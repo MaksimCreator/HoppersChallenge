@@ -66,13 +66,13 @@ public class LevelsPanel : IControl,IUpdateble
             throw new InvalidOperationException();
 
         for (int i = 0; i < _gameData.ActivatedLevels; i++)
-            _levels[i].enabled = true;
+            _levels[i].interactable = true;
 
         if (_gameData.ActivatedLevels == Config.MAX_LEVEL)
             return;
 
         for (int i = _gameData.ActivatedLevels; i < Config.MAX_LEVEL; i++)
-            _levels[i].enabled = false;
+            _levels[i].interactable = false;
     }
 
     private async void EnterLevel(int indexLevel)
